@@ -1,15 +1,15 @@
 var gulp 				 	 = require('gulp'),
-		sass 				 	 = require('gulp-sass'), 					// Sass
-		autoprefixer 	 = require('gulp-autoprefixer'),  // Автопрефиксер(вендорные префиксы для кроссбраузерности)
-		cleanCSS 		 	 = require('gulp-clean-css'),			// Сжатие css
-		uglify 			 	 = require('gulp-uglifyjs'),			// Сжатие js
-		concat 			 	 = require('gulp-concat'),				// Конкатенация файлов
-		browserSync  	 = require('browser-sync'),				// Browser-sync(livereload)
-		rename 			 	 = require('gulp-rename'), 				// Переименование файлов
-		del 				 	 = require('del'),								// Удаление production
-		htmlhint 		 	 = require('gulp-htmlhint'),			// Проверка синтаксиса HTML
-		gutil					 = require('gulp-util'),					// Deploy проекта по ftp
-		ftp						 = require('vinyl-ftp');					// Deploy проекта по ftp
+		sass 				 	 = require('gulp-sass'),
+		autoprefixer 	 = require('gulp-autoprefixer'),
+		cleanCSS 		 	 = require('gulp-clean-css'),
+		uglify 			 	 = require('gulp-uglifyjs'),
+		concat 			 	 = require('gulp-concat'),
+		browserSync  	 = require('browser-sync'),
+		rename 			 	 = require('gulp-rename'),
+		del 				 	 = require('del'),
+		htmlhint 		 	 = require('gulp-htmlhint'),
+		gutil					 = require('gulp-util'),
+		ftp						 = require('vinyl-ftp');					
 
 gulp.task('sass', function() {
 	return gulp.src('src/sass/main.sass')
