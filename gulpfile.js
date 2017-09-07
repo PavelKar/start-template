@@ -7,7 +7,6 @@ var gulp 				 	 = require('gulp'),
 		browserSync  	 = require('browser-sync'),				// Browser-sync(livereload)
 		rename 			 	 = require('gulp-rename'), 				// Переименование файлов
 		del 				 	 = require('del'),								// Удаление production
-		cache 			 	 = require('gulp-cache'),					// Кэш
 		htmlhint 		 	 = require('gulp-htmlhint'),			// Проверка синтаксиса HTML
 		gutil					 = require('gulp-util'),					// Deploy проекта по ftp
 		ftp						 = require('vinyl-ftp');					// Deploy проекта по ftp
@@ -53,10 +52,6 @@ gulp.task('browser-sync', function() {
 
 gulp.task('clean', function() {
 	return del.sync('prod');
-});
-
-gulp.task('clear', function() {
-	return cache.clearAll();
 });
 
 gulp.task('htmlhint', function() {
